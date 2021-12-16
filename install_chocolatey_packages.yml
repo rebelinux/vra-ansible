@@ -17,5 +17,4 @@
       - vscode.install
       - powershell-preview
       - sql-server-management-studio
-      - sql-server-2019
       state: present
