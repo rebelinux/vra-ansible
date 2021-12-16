@@ -9,7 +9,7 @@
        - chocolatey-windowsupdate.extension
       state: present
 
-  - name: Install VS Code and PowerShell Preview
+  - name: Install Sql Server 2019
     win_chocolatey:
       name:
       - sql-server-2019
