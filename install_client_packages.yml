@@ -9,12 +9,28 @@
        - chocolatey-windowsupdate.extension
       state: present
 
-  - name: Install VS Code and PowerShell Preview
+  - name: Install google chrome
     win_chocolatey:
       name:
       - googlechrome
-      - adobereader
-      - vscode.install
-      - powershell-preview
-      - sql-server-management-studio
       state: present
+  - name: Install adobe reader
+    win_chocolatey:
+      name:
+      - adobereader
+      state: present
+  - name: Install vscode
+    win_chocolatey:
+      name:
+      - vscode.install
+      state: present
+  - name: Install powershell
+    win_chocolatey:
+      name:
+      - powershell-preview
+      state: present
+  - name: Install sql-server-management-studio
+    win_chocolatey:
+      name:
+      - sql-server-management-studio
+      state: present         
