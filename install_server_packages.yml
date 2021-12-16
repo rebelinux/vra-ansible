@@ -14,3 +14,7 @@
       name:
       - sql-server-2019
       state: present
+    retries: 2
+    delay: 3
+    register: result
+    until: result is succeeded
