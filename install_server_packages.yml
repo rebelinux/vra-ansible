@@ -2,6 +2,8 @@
 - hosts: all
   tasks:
 
+  - name: set PowerShell memory allowance to 2GB
+    win_shell: set-item wsman:localhost\Shell\MaxMemoryPerShellMB 2048
   - name: Install package dependencies
     win_chocolatey:
       name:
