@@ -32,9 +32,9 @@
       state: present
     delay: 3
     become: yes
-    become_user: '{{ansible_user_domain}}'
+    become_user: '{{ansible_user}}'
     become_method: runas
     vars:
-      ansible_become_password: '{{ansible_password_domain}}'
+      ansible_become_password: '{{ansible_password}}'
     register: result
     until: result is succeeded    
