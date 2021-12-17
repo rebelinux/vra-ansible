@@ -30,12 +30,11 @@
       name:
       - sql-server-2019
       state: present
-    retries: 2
     delay: 3
     become: yes
-    become_user: '{{ansible_user}}'
+    become_user: '{{ansible_user_domain}}'
     become_method: runas
     vars:
-      ansible_become_password: '{{ansible_password}}'
+      ansible_become_password: '{{ansible_password_domain}}'
     register: result
     until: result is succeeded    
