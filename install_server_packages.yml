@@ -32,5 +32,10 @@
       state: present
     retries: 2
     delay: 3
+    become: yes
+    become_user: '{{ansible_user}}'
+    become_method: runas
+    vars:
+      ansible_become_password: '{{ansible_password}}'
     register: result
     until: result is succeeded    
